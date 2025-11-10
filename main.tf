@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "test-krajo"
+    workspaces {
+      name = "test-krajo"
+    }
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
@@ -14,7 +21,7 @@ terraform {
 provider "google" {
   project     = var.project
   region      = "europe-west4"
-  credentials = jsondecode(var.gcp_credentials)
+  credentials = var.gcp_credentials
 }
 
 resource "random_id" "suffix" {
