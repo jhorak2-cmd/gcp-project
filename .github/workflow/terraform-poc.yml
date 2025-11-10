@@ -1,0 +1,30 @@
+name: Terraform GCP Bucket PoC
+
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    runs-on: docker
+    container:
+      image: hashicorp/terraform:latest
+
+    env:
+      TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+      GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan -out=tfplan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve tfplan
+
+      - name: Output Bucket Info
+        run: terraform output
