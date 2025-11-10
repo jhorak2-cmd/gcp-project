@@ -10,8 +10,8 @@ jobs:
       image: hashicorp/terraform:latest
 
     env:
-      TF_VAR_gcp_credentials: ${{ secrets.GCP_CREDENTIALS }}   # GCP service account JSON
-      TF_VAR_project: project-composer-476710                  # Replace with your GCP project ID
+      TF_VAR_gcp_credentials: ${{ secrets.GCP_CREDENTIALS }}
+      TF_VAR_project: project-composer-476710
 
     steps:
       - name: Checkout repository
