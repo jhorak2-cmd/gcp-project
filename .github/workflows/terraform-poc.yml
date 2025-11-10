@@ -12,8 +12,8 @@ jobs:
     env:
       TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}        # Terraform Cloud API token
       GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}  # GCP service account JSON
-      TF_CLOUD_ORGANIZATION: "<YOUR_TFC_ORG>"
-      TF_WORKSPACE: "<YOUR_TFC_WORKSPACE>"
+      TF_CLOUD_ORGANIZATION: "test-krajo"
+      TF_WORKSPACE: "test-krajo"
 
     steps:
       - name: Checkout repository
