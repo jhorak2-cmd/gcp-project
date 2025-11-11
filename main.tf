@@ -32,3 +32,4 @@ resource "google_storage_bucket" "poc_bucket" {
   name     = "poc-test-bucket-${random_id.suffix.hex}"
   location = "europe-west4"
 }
+#
