@@ -15,7 +15,7 @@ jobs:
         run: |
           WORKSPACE_ID=$(curl -s \
             --header "Authorization: Bearer ${{ secrets.TF_API_TOKEN }}" \
-            https://app.terraform.io/api/v2/organizations/${{ secrets.TF_ORG1 }}/workspaces/${{ secrets.TF_WORKSPACE1 }} | jq -r '.data.id')
+            https://app.terraform.io/api/v2/organizations/${{ secrets.TF_ORG }}/workspaces/${{ secrets.TF_WORKSPACE }} | jq -r '.data.id')
           echo "Workspace ID: $WORKSPACE_ID"
           echo "WORKSPACE_ID=$WORKSPACE_ID" >> $GITHUB_ENV
 
