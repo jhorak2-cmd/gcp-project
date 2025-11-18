@@ -37,5 +37,5 @@ resource "google_storage_bucket" "poc_bucket" {
 
   # optional, but common:
   # force_destroy = true
-}
+
 #
