@@ -1,5 +1,5 @@
 name: Trigger Terraform Cloud Run
-#test ci/cd ; neco jeste a jeste neco a jeste jednou a naposledy a uplne naposledy
+#test ci/cd ; neco jeste a jeste neco a jeste jednou a naposledy a uplne naposledy a snad to pujde
 on:
   workflow_dispatch: # Manual trigger
   push:              # Or any other event you want
