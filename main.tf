@@ -1,8 +1,8 @@
 terraform {
   cloud {
-    organization = "test-poc-kyndryl"
+    organization = "poc-kyndryl"
     workspaces {
-      name = "test-poc-kyndryl"
+      name = "poc-kyndryl-workspace"
     }
   }
 
