@@ -30,7 +30,7 @@ resource "random_id" "suffix" {
 
 resource "google_storage_bucket" "poc_bucket" {
   name                         = "my-poc-bucket-${random_id.suffix.hex}"
-  location                     = "europe-west4"
+  location                     = "europe-west3"
   uniform_bucket_level_access  = true
 }
 
